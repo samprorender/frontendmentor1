@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Primary */
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+    /* Neutral */
+--VeryDarkBlue: hsl(234, 12%, 34%);
+--GrayishBlue: hsl(229, 6%, 66%);
+--VeryLightGray: hsl(0, 0%, 98%);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--VeryLightGray);
+}
+
+.container{
+    padding:20px auto;
+}
+
+.header{
+    margin: 80px auto;
+    text-align: center;
+    max-width: 650px;
+    padding: 0 30px;
+}
+header h1{
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 40px;
+    color: var(--VeryDarkBlue);
+}
+header h2{
+font-size: 24px;
+    font-weight: 600;
+    line-height: 40px;
+    color: var(--VeryDarkBlue);
+}
+header p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--GrayishBlue);
+    margin-top: 10px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 20px 50px 20px;
+}
+.cards{
+    max-width: 315px;
+    min-height: 225px;
+    margin:0 15px 25px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px var(--GrayishBlue);
+    display:grid;
+    padding: 25px;
+    
+}
+.cards h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--VeryDarkBlue);
+    line-height: normal;
+
+}
+
+.cards p{
+    color: var(--GrayishBlue);
+    font-size: 13.4px;
+    font-weight: 400;
+    align-self: start;
+}
+.cards img{
+    grid-row: 3/4;
+    align-self: end;
+    justify-self: end;
+    width: 58px;
+}
+.card1{
+    border-top: 3px solid var(--Cyan);
+}
+.card2{
+    border-top: 3px solid var(--Red);
+}
+.card3{
+    border-top: 3px solid var(--Orange);
+}
+.card4{
+    border-top: 3px solid var(--Blue);
+}
+ /* ------------------>Footer------------------ */
+
+ footer{
+     margin-bottom: 20px;
+ }
+ .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+/* ------------------>(375px)------------------ */
+@media only screen and (min-width:376px){
+
+    .cards{
+        max-width: 400px;
+        width: 85%;
+    }
+}
+/* ------------------>(730px)------------------ */
+@media only screen and (min-width:730px){
+
+    main{
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cards{
+        max-width: none;
+        width: 315px;
+    }
+
+}
+/* ------------------>(1075px)------------------ */
+@media only screen and (min-width:1075px){
+
+    header h1{
+        font-size: 38px;
+        line-height: 60px;
+    }
+    header h2{
+        font-size: 38px;
+        line-height: 50px;
+        margin-bottom: 20px;
+    }
+    header p{
+        font-size: 17px;
+    }
+    main{
+        display:grid;
+        grid-template-columns: repeat(3, 1f);
+        grid-template-rows: repeat(4, 1f);
+    }
+
+    .card1{
+        grid-column: 1/2;
+        grid-row: 2/4;
+    }
+    .card2{
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+    .card3{
+        grid-column: 2/3;
+        grid-row: 3/5;
+    }
+    .card4{
+        grid-column: 3/4;
+        grid-row: 2/4;
+    }
+
+}
